@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import styles from './App.module.css';
+import PetList from './components/PetList';
+import VeterinaryServices from './components/VeterinaryServices';
+import ContactForm from './components/ContactForm';
+import PetAdoptionForm from './components/PetAdoptionForm';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={`${styles.app} ${isDarkMode ? styles.darkMode : ''}`}>
+      <header className={styles.header}>
+        <h1>Pet Care Hub</h1>
+        <p>Your one-stop place for pet care and veterinary services</p>
+        <button onClick={() => setIsDarkMode(!isDarkMode)} className={styles.toggleButton}>
+          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
       </header>
+      <main>
+        <PetList isDarkMode={isDarkMode} />
+        <VeterinaryServices isDarkMode={isDarkMode} />
+        <PetAdoptionForm isDarkMode={isDarkMode} />
+        <ContactForm isDarkMode={isDarkMode} />
+      </main>
+      <footer className={styles.footer}>
+        <p>© 2025 Pet Care Hub. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

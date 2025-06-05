@@ -1,0 +1,126 @@
+.adoptionForm {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--bg-color-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  margin-bottom: 40px;
+}
+
+.adoptionForm.darkMode {
+  background: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.adoptionForm h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.formAnimation {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.adoptionForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.adoptionForm input,
+.adoptionForm textarea {
+  padding: 10px;
+  border: 1px solid var(--text-color-secondary);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.adoptionForm input:focus,
+.adoptionForm textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.adoptionForm textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.adoptionForm button {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  animation: bounce 0.5s infinite alternate;
+}
+
+.adoptionForm button:hover {
+  background-color: var(--accent-color-dark);
+  transform: scale(1.05);
+}
+
+.submitStatus {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+.submitStatus.error {
+  color: #d32f2f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .adoptionForm {
+    padding: 15px;
+  }
+
+  .adoptionForm h2 {
+    font-size: 1.5rem;
+  }
+
+  .adoptionForm input,
+  .adoptionForm textarea {
+    font-size: 0.9rem;
+  }
+
+  .adoptionForm button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

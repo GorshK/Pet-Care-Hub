@@ -1,0 +1,28 @@
+.vetServices {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.vetServices h2 {
+  color: #007f3f;
+  margin-bottom: 10px;
+}
+
+.vetServices p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .vetServices {
+    padding: 15px;
+  }
+
+  .vetServices h2 {
+    font-size: 1.5rem;
+  }
+}

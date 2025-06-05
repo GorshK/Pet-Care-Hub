@@ -1,0 +1,200 @@
+.petList {
+  margin-bottom: 40px;
+  background: var(--bg-color-light);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.petList.darkMode {
+  background: #2a2a2a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.petList h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--text-color-secondary);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.petCarousel {
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carouselItem {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.petImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.carouselItem:hover .petImage {
+  opacity: 0.9;
+}
+
+.carouselCaption {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.carouselCaption h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.carouselCaption p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.petGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.petCard {
+  border: 2px solid var(--accent-color);
+  padding: 20px;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.petCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 127, 63, 0.25);
+}
+
+.petCard h3 {
+  margin-bottom: 12px;
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: var(--bg-color-light);
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.petCard p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .petCard {
+    max-width: 220px;
+  }
+
+  .petImage {
+    height: 140px;
+  }
+
+  .petList h2 {
+    font-size: 1.8rem;
+  }
+
+  .petCarousel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .petGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .petCard {
+    max-width: 100%;
+  }
+
+  .petImage {
+    height: 120px;
+  }
+
+  .petList {
+    padding: 20px;
+  }
+
+  .petList h2 {
+    font-size: 1.5rem;
+  }
+
+  .searchInput {
+    max-width: 100%;
+  }
+
+  .carouselCaption h3 {
+    font-size: 1rem;
+  }
+
+  .carouselCaption p {
+    font-size: 0.8rem;
+  }
+}
