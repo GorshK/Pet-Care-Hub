@@ -1,6 +1,5 @@
 Pet Care Hub is a React-based web application designed to showcase various pets, their recommended food, and facilitate pet adoption. It includes features like a pet search filter, a carousel for pets, a pet profile modal, an adoption form, and a contact form. The app is styled with CSS Modules for modularity and supports both light and dark modes for accessibility. It uses Formspree for form submissions.
 
-Features
 Pet List: Displays a list of pets (Dog, Cat, Fish, Rabbit, Bird, Hamster) with their recommended food, using locally hosted images.
 Pet Search Filter: Allows users to search pets by type (e.g., "Dog").
 Pet Carousel: A responsive carousel (via react-responsive-carousel) showcasing pets with captions.
