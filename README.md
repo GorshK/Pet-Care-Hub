@@ -11,4 +11,4 @@ Dark Mode Toggle: A button in the header to switch between light and dark themes
 Lazy Loading: Images use loading="lazy" to improve performance.
 Responsive Design: Optimized for desktops, tablets (≤768px), and mobiles (≤480px).
 Animations: Includes fade-in, slide-in, and bounce animations for enhanced user experience.
-This webpage is hosted on Netlify at https://petstor.netlify.app/ 
+This webpage is hosted on Netlify at https://petstor.netlify.app/. 
